@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Muntajir Sheikh</title>
+    <meta
+      name="description"
+      content="A cinematic birthday surprise for Muntajir Sheikh."
+    />
+    <style>
+      :root {
+        --bg-1: #090d1b;
+        --bg-2: #170f2d;
+        --bg-3: #23143b;
+        --ink: #f5ecff;
+        --muted: #d7cbf6;
+        --pink: #ff4fb3;
+        --magenta: #ff57c7;
+        --purple: #9b5cff;
+        --gold: #ffd166;
+        --blue: #44d0ff;
+        --cyan: #5ef2ff;
+        --mint: #9ef6d0;
+        --red: #ff5a75;
+        --shadow: 0 24px 60px rgba(9, 7, 20, 0.55);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(255, 95, 169, 0.18), transparent 26%),
+          radial-gradient(circle at bottom right, rgba(69, 197, 255, 0.18), transparent 28%),
+          linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3));
+        color: var(--ink);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+        background-size: 32px 32px;
+        pointer-events: none;
+        opacity: 0.4;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .intro-screen {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(19,16,34,0.94), rgba(25,18,43,0.92), rgba(32,19,54,0.95));
+      }
+
+      .intro-screen::before {
+        content: "";
+        position: absolute;
+        inset: -20% -10%;
+        background: radial-gradient(circle at 20% 20%, rgba(255, 158, 46, 0.18), transparent 20%),
+                    radial-gradient(circle at 80% 15%, rgba(92, 239, 255, 0.16), transparent 18%),
+                    radial-gradient(circle at 50% 75%, rgba(255, 83, 185, 0.18), transparent 28%);
+        animation: gradientMove 18s ease infinite alternate;
+      }
+
+      .intro-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+        padding: 54px 30px 40px;
+        border: 1px solid rgba(255,255,255,0.15);
+        background: rgba(17, 13, 28, 0.38);
+        border-radius: 30px;
+        backdrop-filter: blur(14px);
+        box-shadow: var(--shadow);
+        animation: fadeUp 1.2s ease both;
+      }
+
+      .intro-content h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        letter-spacing: 0.12em;
+        line-height: 1.08;
+        font-weight: 900;
+        text-shadow: 0 0 25px rgba(255, 191, 95, 0.7), 0 0 45px rgba(255, 89, 177, 0.5);
+        animation: glowPulse 2.8s ease-in-out infinite alternate;
+      }
+
+      .intro-subtitle {
+        margin-top: 18px;
+        font-size: clamp(1.1rem, 2vw, 2rem);
+        color: rgba(255,255,255,0.95);
+        letter-spacing: 0.04em;
+      }
+
+      .signature {
+        margin-top: 18px;
+        font-size: clamp(1.05rem, 2vw, 1.7rem);
+        font-weight: 700;
+        color: #f9d8ff;
+      }
+
+      .ready-text {
+        margin-top: 32px;
+        font-size: clamp(1.2rem, 2.8vw, 2.2rem);
+        font-weight: 800;
+        color: #fff3ba;
+        animation: textPop 1.9s ease-in-out infinite alternate;
+      }
+
+      .intro-button,
+      .unlock-button,
+      .nav-btn,
+      .next-btn,
+      .celebrate-button,
+      .music-toggle,
+      .back-to-top {
+        border: none;
+        cursor: pointer;
+        border-radius: 999px;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+      }
+
+      .intro-button {
+        margin-top: 22px;
+        padding: 18px 34px;
+        font-size: clamp(1.05rem, 2vw, 1.4rem);
+        font-weight: 800;
+        color: #1d0d2b;
+        background: linear-gradient(135deg, #ffd166, #ff8fc5, #7fe9ff);
+        box-shadow: 0 18px 35px rgba(255, 100, 195, 0.45);
+      }
+
+      .intro-button:hover,
+      .unlock-button:hover,
+      .next-btn:hover,
+      .celebrate-button:hover,
+      .music-toggle:hover,
+      .nav-btn:hover,
+      .back-to-top:hover {
+        transform: translateY(-2px) scale(1.01);
+        filter: brightness(1.04);
+      }
+
+      .floating-layer,
+      .confetti-layer,
+      .heart-layer,
+      .spark-layer,
+      .rocket-layer {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .balloon,
+      .star,
+      .spark,
+      .confetti-piece,
+      .heart-piece,
+      .rocket {
+        position: absolute;
+        animation: floatUp 12s ease-in-out infinite alternate;
+      }
+
+      .balloon {
+        width: 26px;
+        height: 34px;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        background: linear-gradient(180deg, rgba(255,124,201,0.95), rgba(255,82,146,0.75));
+        box-shadow: inset -8px -10px rgba(0,0,0,0.12);
+      }
+
+      .balloon::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        width: 2px;
+        height: 40px;
+        background: rgba(255,255,255,0.65);
+        transform: translateX(-50%);
+      }
+
+      .balloon:nth-child(odd) {
+        background: linear-gradient(180deg, rgba(255,224,116,0.95), rgba(255,172,80,0.8));
+      }
+
+      .balloon:nth-child(3n) {
+        background: linear-gradient(180deg, rgba(118,227,255,0.94), rgba(103,134,255,0.8));
+      }
+
+      .star {
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(135deg, #fff7c2, #ffd166);
+        clip-path: polygon(50% 0%, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0% 50%, 38% 38%);
+        opacity: 0.9;
+        animation: twinkle 3.4s ease-in-out infinite alternate;
+      }
+
+      .spark {
+        width: 10px;
+        height: 10px;
+        background: radial-gradient(circle, #fff, #8ef7ff 35%, transparent 70%);
+        border-radius: 50%;
+        box-shadow: 0 0 18px rgba(255,255,255,0.9);
+        animation: sparkle 2.5s linear infinite;
+      }
+
+      .confetti-piece {
+        width: 10px;
+        height: 18px;
+        border-radius: 4px;
+        opacity: 0.98;
+        animation: confettiDrop 4.5s linear forwards;
+      }
+
+      .heart-piece {
+        font-size: 24px;
+        animation: heartFloat 4s ease-in-out forwards;
+      }
+
+      .rocket {
+        font-size: 38px;
+        animation: rocketFly 7s ease-in-out infinite alternate;
+      }
+
+      .dob-screen {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 42px 20px;
+      }
+
+      .login-card {
+        width: min(560px, 100%);
+        background: rgba(18, 13, 31, 0.66);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 32px;
+        padding: clamp(24px, 4vw, 42px);
+        box-shadow: 0 22px 65px rgba(9, 8, 17, 0.6);
+        backdrop-filter: blur(16px);
+        transform: translateY(0);
+        animation: fadeUp 0.8s ease both;
+      }
+
+      .login-card h2 {
+        margin: 0 0 10px;
+        text-align: center;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1;
+      }
+
+      .login-card > p {
+        margin: 0 0 24px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .login-label {
+        font-weight: 700;
+        color: #fce6ff;
+        font-size: 1.06rem;
+      }
+
+      .login-card input[type="date"] {
+        width: 100%;
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.06);
+        color: var(--ink);
+        padding: 18px 18px;
+        font-size: 1.12rem;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      }
+
+      .login-card input[type="date"]:focus {
+        border-color: rgba(124, 230, 255, 0.9);
+        box-shadow: 0 0 0 4px rgba(124, 230, 255, 0.18);
+      }
+
+      .login-card input[type="date"].error {
+        border-color: rgba(255, 102, 125, 0.85);
+        box-shadow: 0 0 0 4px rgba(255, 108, 124, 0.14);
+        animation: shake 0.45s ease-in-out;
+      }
+
+      .login-card input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+        cursor: pointer;
+      }
+
+      .unlock-button {
+        margin-top: 6px;
+        padding: 18px 28px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: white;
+        background: linear-gradient(135deg, #5d4df5, #ff5ca8, #ffb86b);
+        box-shadow: 0 18px 42px rgba(122, 84, 255, 0.4);
+      }
+
+      .dob-message {
+        min-height: 32px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.02rem;
+        line-height: 1.5;
+        transition: all 0.25s ease;
+      }
+
+      .dob-message.success {
+        color: #9af7d7;
+        text-shadow: 0 0 14px rgba(118, 255, 181, 0.7);
+      }
+
+      .dob-message.error {
+        color: #ffd0d8;
+        text-shadow: 0 0 14px rgba(255, 111, 146, 0.55);
+      }
+
+      .site {
+        position: relative;
+      }
+
+      .top-nav {
+        position: fixed;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(1000px, calc(100% - 24px));
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 18px;
+        border-radius: 18px;
+        background: rgba(15, 12, 24, 0.6);
+        border: 1px solid rgba(255,255,255,0.12);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 18px 36px rgba(8, 8, 18, 0.28);
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        flex: 1;
+      }
+
+      .nav-link {
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.8);
+        transition: all 0.25s ease;
+      }
+
+      .nav-link.active,
+      .nav-link:hover {
+        color: #fff;
+        background: linear-gradient(135deg, rgba(255, 112, 184, 0.2), rgba(78, 202, 255, 0.2));
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+      }
+
+      .music-toggle {
+        padding: 10px 12px;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .page {
+        position: relative;
+        min-height: 100vh;
+        padding: 110px 24px 80px;
+        scroll-margin-top: 100px;
+      }
+
+      .page-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .panel {
+        position: relative;
+        background: rgba(20, 18, 32, 0.52);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 32px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        padding: clamp(22px, 3vw, 42px);
+      }
+
+      .page h2 {
+        margin: 0 0 18px;
+        font-size: clamp(2.2rem, 4vw, 4rem);
+        line-height: 1.12;
+        text-align: center;
+        letter-spacing: 0.04em;
+      }
+
+      .page-tag {
+        display: inline-block;
+        margin-bottom: 18px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #ffd166;
+      }
+
+      .birthday-hero {
+        text-align: center;
+      }
+
+      .date-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-size: clamp(1rem, 1.8vw, 1.4rem);
+        font-weight: 800;
+        color: #fff4bf;
+        background: linear-gradient(135deg, rgba(255, 209, 102, 0.2), rgba(255, 120, 186, 0.18));
+        border: 1px solid rgba(255, 209, 102, 0.26);
+      }
+
+      .lead {
+        max-width: 900px;
+        margin: 22px auto 0;
+        font-size: clamp(1.07rem, 2vw, 1.4rem);
+        line-height: 1.9;
+        color: #f3ebff;
+      }
+
+      .lead strong {
+        color: #ffe79d;
+      }
+
+      .wish-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 34px;
+      }
+
+      .wish-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 24px;
+        padding: 22px 18px;
+        min-height: 220px;
+        box-shadow: inset 0 1px rgba(255,255,255,0.08);
+      }
+
+      .wish-card h3 {
+        margin: 0 0 12px;
+        font-size: 1.35rem;
+        color: #ffdd98;
+      }
+
+      .wish-card p {
+        margin: 0;
+        color: #ebebff;
+        line-height: 1.8;
+      }
+
+      .cake-wrap {
+        position: relative;
+        margin: 36px auto 0;
+        width: min(500px, 82vw);
+        min-height: 280px;
+      }
+
+      .birthday-cake {
+        position: relative;
+        margin: 0 auto;
+        width: 260px;
+        height: 210px;
+        animation: floatUp 5s ease-in-out infinite alternate;
+      }
+
+      .cake-top {
+        position: absolute;
+        left: 50%;
+        bottom: 64px;
+        transform: translateX(-50%);
+        width: 210px;
+        height: 52px;
+        background: linear-gradient(135deg, #ff86c8, #ff5ea8, #ffc85c);
+        border-radius: 18px 18px 14px 14px;
+        box-shadow: 0 14px 22px rgba(255, 95, 160, 0.28);
+      }
+
+      .cake-icing {
+        position: absolute;
+        inset: 0;
+        border-radius: 16px;
+        background: linear-gradient(145deg, rgba(255,255,255,0.7), rgba(255,255,255,0.08));
+      }
+
+      .cake-icing::before,
+      .cake-icing::after {
+        content: "";
+        position: absolute;
+        inset: 14px 18px auto 18px;
+        height: 12px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.75);
+      }
+
+      .cake-icing::after {
+        top: 28px;
+        left: 36px;
+        right: 36px;
+      }
+
+      .cake-body {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 220px;
+        height: 110px;
+        background: linear-gradient(180deg, #ffefb3, #ffd776 26%, #ffb75a 100%);
+        border-radius: 14px 14px 10px 10px;
+        box-shadow: inset 0 0 0 3px rgba(255,255,255,0.18);
+      }
+
+      .cake-body::before,
+      .cake-body::after {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background: #ff6da8;
+        border-radius: 50%;
+        top: 18px;
+        box-shadow: 0 0 0 6px rgba(255,255,255,0.15);
+      }
+
+      .cake-body::before { left: 35px; }
+      .cake-body::after { right: 35px; }
+
+      .cake-base {
+        position: absolute;
+        left: 50%;
+        bottom: -18px;
+        transform: translateX(-50%);
+        width: 260px;
+        height: 22px;
+        border-radius: 18px;
+        background: linear-gradient(90deg, #8d6eff, #ff7dc9, #ffc75d);
+      }
+
+      .candle {
+        position: absolute;
+        width: 12px;
+        height: 38px;
+        bottom: 102px;
+        border-radius: 8px;
+        background: linear-gradient(180deg, #fff1d0, #d1e6ff);
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.18);
+      }
+
+      .candle:nth-child(1) { left: 94px; }
+      .candle:nth-child(2) { left: 118px; }
+      .candle:nth-child(3) { left: 142px; }
+      .candle::before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 50%;
+        top: -18px;
+        transform: translateX(-50%);
+        background: radial-gradient(circle, #fff8c2, #ffd849 60%, #ffb057 100%);
+        box-shadow: 0 0 18px rgba(255, 204, 75, 0.9);
+        border-radius: 50%;
+        animation: flicker 0.8s ease-in-out infinite alternate;
+      }
+
+      .letter-box {
+        margin-top: 20px;
+        padding: 26px 20px 14px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+        border-radius: 28px;
+      }
+
+      .letter-box p {
+        margin: 0 0 16px;
+        color: #f1e7ff;
+        line-height: 1.9;
+        font-size: clamp(1rem, 1.7vw, 1.23rem);
+      }
+
+      .letter-box p strong {
+        color: #ffd166;
+      }
+
+      .typewriter {
+        white-space: normal;
+      }
+
+      .typewriter .cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1.1em;
+        background: #ffd166;
+        vertical-align: bottom;
+        margin-left: 3px;
+        animation: blink 0.85s step-end infinite;
+      }
+
+      .breaker {
+        margin: 32px auto 22px;
+        width: min(240px, 45vw);
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(255, 180, 101, 0.95), rgba(255, 112, 184, 0.9), transparent);
+      }
+
+      .motivation-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 26px;
+      }
+
+      .rule-card {
+        padding: 24px 20px;
+        background: linear-gradient(180deg, rgba(71, 39, 105, 0.58), rgba(17, 15, 31, 0.68));
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 24px;
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+      }
+
+      .rule-number {
+        display: inline-block;
+        font-size: 0.74rem;
+        letter-spacing: 0.14em;
+        font-weight: 800;
+        color: #8ae7ff;
+        margin-bottom: 8px;
+      }
+
+      .rule-card h3 {
+        margin: 0 0 10px;
+        font-size: clamp(1.25rem, 2vw, 1.7rem);
+        color: #ffe2a8;
+      }
+
+      .rule-card p {
+        margin: 0;
+        color: #f1edff;
+        line-height: 1.8;
+      }
+
+      .quote-block {
+        margin-top: 22px;
+        padding: 26px 22px;
+        background: linear-gradient(135deg, rgba(91, 130, 255, 0.18), rgba(255, 96, 169, 0.18));
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 26px;
+        font-size: clamp(1.15rem, 2vw, 1.45rem);
+        color: #fff9d8;
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      .wish-sections {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 26px;
+      }
+
+      .wish-section {
+        padding: 22px 20px;
+        border-radius: 24px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.03));
+        border: 1px solid rgba(255,255,255,0.12);
+        box-shadow: inset 0 1px rgba(255,255,255,0.08);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .wish-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .wish-section h3 {
+        margin: 0 0 12px;
+        font-size: clamp(1.4rem, 2vw, 2rem);
+      }
+
+      .wish-section p {
+        margin: 0;
+        color: #efebff;
+        line-height: 1.8;
+      }
+
+      .memory-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 24px;
+      }
+
+      .photo-card {
+        position: relative;
+        min-height: 280px;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.12);
+        background: linear-gradient(160deg, rgba(106,73,190,0.4), rgba(32,28,55,0.7));
+        box-shadow: 0 22px 40px rgba(7, 5, 15, 0.44);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .photo-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 28px 52px rgba(18, 11, 28, 0.55);
+      }
+
+      .photo-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .photo-card:hover img {
+        transform: scale(1.08);
+      }
+
+      .photo-card.no-image {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .photo-card.no-image::before {
+        content: "📸";
+        position: absolute;
+        inset: 18px 18px auto 18px;
+        height: 150px;
+        display: grid;
+        place-items: center;
+        font-size: 4rem;
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+        border-radius: 18px;
+        border: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .photo-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 16px 14px 14px;
+        background: linear-gradient(180deg, rgba(12,8,21,0.1), rgba(12,8,21,0.82));
+        font-size: 0.94rem;
+        line-height: 1.5;
+        color: #f7f4ff;
+      }
+
+      .last-letter {
+        margin-top: 30px;
+        padding: 18px 6px 0;
+      }
+
+      .final-celebration {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 120px 24px 100px;
+      }
+
+      .final-card {
+        position: relative;
+        width: min(980px, 100%);
+        text-align: center;
+        padding: clamp(28px, 5vw, 60px) 18px 48px;
+        border-radius: 32px;
+        background: rgba(17, 12, 30, 0.64);
+        border: 1px solid rgba(255,255,255,0.12);
+        box-shadow: 0 24px 68px rgba(11, 9, 25, 0.62);
+        overflow: hidden;
+      }
+
+      .final-card h2 {
+        margin: 0;
+        font-size: clamp(2.8rem, 8vw, 6rem);
+        letter-spacing: 0.08em;
+        text-shadow: 0 0 30px rgba(255, 191, 97, 0.8), 0 0 40px rgba(255, 100, 175, 0.52);
+      }
+
+      .final-card .name {
+        margin-top: 18px;
+        font-size: clamp(1.7rem, 3.5vw, 3rem);
+        font-weight: 800;
+        color: #ffd8ef;
+      }
+
+      .final-card .dob-text {
+        margin-top: 8px;
+        font-size: clamp(1.1rem, 2.4vw, 1.8rem);
+        color: #ffe9b4;
+        letter-spacing: 0.08em;
+      }
+
+      .final-card .tagline {
+        margin-top: 26px;
+        font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #aaf8fb;
+      }
+
+      .final-message {
+        max-width: 790px;
+        margin: 28px auto 0;
+        font-size: clamp(1.04rem, 1.8vw, 1.35rem);
+        line-height: 1.9;
+        color: #f4edff;
+      }
+
+      .celebrate-button {
+        margin-top: 32px;
+        padding: 19px 30px;
+        font-size: 1.1rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        background: linear-gradient(135deg, #ffd166, #ff7ec3, #7ce9ff);
+        color: #1a1325;
+        box-shadow: 0 20px 42px rgba(255, 122, 195, 0.36);
+      }
+
+      .next-btn,
+      .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 24px;
+        font-weight: 800;
+        background: linear-gradient(135deg, rgba(255, 110, 175, 0.18), rgba(99, 214, 255, 0.18));
+        border: 1px solid rgba(255,255,255,0.16);
+        color: var(--ink);
+      }
+
+      .next-btn {
+        margin-top: 26px;
+      }
+
+      .next-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+      }
+
+      .back-to-top-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+      }
+
+      .floating-hearts {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .heart-drop {
+        position: absolute;
+        font-size: clamp(18px, 2vw, 26px);
+        animation: heartFloatDown 8s ease-in-out infinite;
+        opacity: 0.8;
+      }
+
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(36px);
+        transition: opacity 0.85s ease, transform 0.85s ease;
+      }
+
+      .scroll-reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .slide-left {
+        opacity: 0;
+        transform: translateX(-80px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .slide-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .slide-right {
+        opacity: 0;
+        transform: translateX(80px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .slide-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .scale-up {
+        opacity: 0;
+        transform: scale(0.88);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .scale-up.visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      @keyframes glowPulse {
+        0% { text-shadow: 0 0 16px rgba(255, 191, 95, 0.65), 0 0 28px rgba(255, 89, 177, 0.4); }
+        100% { text-shadow: 0 0 32px rgba(255, 191, 95, 0.9), 0 0 52px rgba(96, 225, 255, 0.56), 0 0 72px rgba(255, 93, 179, 0.6); }
+      }
+
+      @keyframes gradientMove {
+        0% { transform: translate3d(0, 0, 0) scale(1.1); }
+        100% { transform: translate3d(-3%, 2%, 0) scale(1.18); }
+      }
+
+      @keyframes textPop {
+        0% { transform: scale(0.98); opacity: 0.7; }
+        100% { transform: scale(1.03); opacity: 1; }
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes floatUp {
+        0% { transform: translateY(0px) rotate(0deg); }
+        100% { transform: translateY(-18px) rotate(3deg); }
+      }
+
+      @keyframes twinkle {
+        0% { transform: scale(0.8); opacity: 0.6; }
+        100% { transform: scale(1.3); opacity: 1; }
+      }
+
+      @keyframes sparkle {
+        0% { transform: scale(0.8); opacity: 0.5; }
+        50% { transform: scale(1.3); opacity: 1; }
+        100% { transform: scale(0.7); opacity: 0.4; }
+      }
+
+      @keyframes confettiDrop {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, -10px, 0) rotate(0deg);
+        }
+        15% { opacity: 1; }
+        100% {
+          opacity: 0;
+          transform: translate3d(var(--x), 120vh, 0) rotate(var(--r));
+        }
+      }
+
+      @keyframes heartFloat {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 20px, 0) scale(0.7) rotate(0deg);
+        }
+        15% { opacity: 1; }
+        100% {
+          opacity: 0;
+          transform: translate3d(var(--x), -110vh, 0) scale(1.2) rotate(var(--r));
+        }
+      }
+
+      @keyframes heartFloatDown {
+        0% { transform: translateY(-10vh) scale(0.8) rotate(0deg); opacity: 0; }
+        15% { opacity: 1; }
+        100% { transform: translateY(110vh) scale(1.2) rotate(18deg); opacity: 0; }
+      }
+
+      @keyframes rocketFly {
+        0% { transform: translateY(0px) translateX(0px) rotate(-8deg); }
+        100% { transform: translateY(-12px) translateX(18px) rotate(8deg); }
+      }
+
+      @keyframes flicker {
+        0% { opacity: 0.9; transform: translateX(-50%) scale(0.96); }
+        100% { opacity: 1; transform: translateX(-50%) scale(1.06); }
+      }
+
+      @keyframes blink {
+        0%, 50% { opacity: 1; }
+        50.1%, 100% { opacity: 0; }
+      }
+
+      @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        20% { transform: translateX(-8px); }
+        40% { transform: translateX(8px); }
+        60% { transform: translateX(-7px); }
+        80% { transform: translateX(7px); }
+      }
+
+      @media (max-width: 960px) {
+        .wish-grid,
+        .motivation-grid,
+        .wish-sections,
+        .memory-gallery {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 700px) {
+        .top-nav {
+          top: 8px;
+          padding: 12px 10px;
+          width: calc(100% - 12px);
+          flex-wrap: wrap;
+        }
+
+        .nav-links {
+          justify-content: flex-start;
+        }
+
+        .page {
+          padding-top: 140px;
+        }
+
+        .wish-grid,
+        .motivation-grid,
+        .wish-sections,
+        .memory-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .cake-wrap {
+          width: min(360px, 90vw);
+        }
+
+        .login-card input[type="date"] {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="birthdayMusic" loop preload="none"></audio>
+
+    <div class="floating-layer" id="floatingLayer"></div>
+    <div class="confetti-layer" id="confettiLayer"></div>
+    <div class="heart-layer" id="heartLayer"></div>
+    <div class="spark-layer" id="sparkLayer"></div>
+    <div class="rocket-layer" id="rocketLayer"></div>
+
+    <!-- HTML -->
+    <section class="intro-screen" id="introScreen" aria-label="Birthday intro screen">
+      <div class="floating-layer" aria-hidden="true">
+        <span class="balloon" style="left: 8%; top: 12%; animation-delay: 0.4s;"></span>
+        <span class="balloon" style="left: 18%; top: 18%; animation-delay: 1.2s;"></span>
+        <span class="balloon" style="left: 35%; top: 14%; animation-delay: 1.6s;"></span>
+        <span class="balloon" style="left: 55%; top: 11%; animation-delay: 0.9s;"></span>
+        <span class="balloon" style="left: 72%; top: 18%; animation-delay: 2s;"></span>
+        <span class="balloon" style="left: 88%; top: 15%; animation-delay: 1.4s;"></span>
+        <span class="balloon" style="left: 10%; top: 65%; animation-delay: 1.1s;"></span>
+        <span class="balloon" style="left: 84%; top: 70%; animation-delay: 0.7s;"></span>
+
+        <span class="star" style="left: 12%; top: 23%;"></span>
+        <span class="star" style="left: 22%; top: 40%;"></span>
+        <span class="star" style="left: 41%; top: 26%;"></span>
+        <span class="star" style="left: 60%; top: 38%;"></span>
+        <span class="star" style="left: 78%; top: 28%;"></span>
+        <span class="star" style="left: 85%; top: 48%;"></span>
+        <span class="star" style="left: 20%; top: 74%;"></span>
+        <span class="star" style="left: 70%; top: 72%;"></span>
+
+        <span class="spark" style="left: 28%; top: 52%; animation-delay: 1s;"></span>
+        <span class="spark" style="left: 50%; top: 58%; animation-delay: 0.3s;"></span>
+        <span class="spark" style="left: 70%; top: 52%; animation-delay: 1.6s;"></span>
+        <span class="spark" style="left: 42%; top: 78%; animation-delay: 0.8s;"></span>
+      </div>
+
+      <div class="intro-content">
+        <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+        <p class="intro-subtitle">A Special Surprise Is Waiting For You...</p>
+        <p class="signature">Made Especially For Muntajir Sheikh ❤️</p>
+        <div class="ready-text">Are You Ready For Your Surprise?</div>
+        <button class="intro-button" id="startSurpriseBtn" type="button">START SURPRISE ✨</button>
+      </div>
+    </section>
+
+    <section class="dob-screen hidden" id="dobScreen" aria-label="Unlock birthday surprise">
+      <div class="login-card">
+        <h2>🔐 Unlock Your Birthday Surprise</h2>
+        <p>Only the birthday boy can unlock this surprise.</p>
+
+        <form class="login-form" id="dobForm">
+          <label class="login-label" for="dobInput">Enter Your Date of Birth</label>
+          <input id="dobInput" name="dob" type="date" aria-label="Date of birth" />
+          <div id="dobMessage" class="dob-message" aria-live="polite"></div>
+          <button class="unlock-button" type="submit">UNLOCK SURPRISE 🔓</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="site hidden" id="mainSite">
+      <nav class="top-nav" aria-label="Birthday sections navigation">
+        <div class="nav-links">
+          <a class="nav-link active" href="#page-birthday">🎂 Birthday</a>
+          <a class="nav-link" href="#page-message">❤️ Message</a>
+          <a class="nav-link" href="#page-career">🚀 Career</a>
+          <a class="nav-link" href="#page-wishes">✨ Wishes</a>
+          <a class="nav-link" href="#page-memories">📸 Memories</a>
+          <a class="nav-link" href="#page-final">🎉 Final</a>
+        </div>
+        <button class="music-toggle" id="musicToggle" type="button">🔊 Music On/Off</button>
+      </nav>
+
+      <main>
+        <section class="page" id="page-birthday">
+          <div class="page-inner">
+            <div class="panel scroll-reveal">
+              <div class="birthday-hero">
+                <span class="page-tag">Birthday Celebration</span>
+                <h2>🎂 HAPPY BIRTHDAY MUNTAJIR SHEIKH 🎂</h2>
+                <div class="date-badge">04 • 10 • 2000</div>
+
+                <p class="lead">
+                  Today isn't just another day.<br />
+                  <strong>Today is a celebration of you, your journey, your personality and all the beautiful moments that make you special.</strong>
+                </p>
+
+                <p class="lead">
+                  There is so much to love about the way you carry yourself, the way you make people smile, and the way your presence brings warmth to the people around you. Every year adds more depth to who you are, more memories to cherish, and more reasons to be proud of the path you are on. Your life is not just a timeline — it is a story filled with courage, laughter, resilience and hope.
+                </p>
+
+                <p class="lead">
+                  On this special day, we celebrate more than your birthday. We celebrate your happiness, your growth, your family bond, your friendships, and all the little things that make your heart so beautiful. You deserve a life full of peace, adventure, success, and unforgettable moments that remind you how precious you truly are.
+                </p>
+
+                <p class="lead">
+                  Every chapter you have walked through has shaped you into someone strong, thoughtful, and full of potential. The future is still bright, the dreams are still alive, and the best part is that your story is still being written. May this birthday mark a new beginning, a deeper sense of confidence, and a greater joy in all the days ahead.
+                </p>
+              </div>
+
+              <div class="cake-wrap scale-up">
+                <div class="birthday-cake" aria-label="Animated birthday cake">
+                  <div class="candle"></div>
+                  <div class="candle"></div>
+                  <div class="candle"></div>
+                  <div class="cake-top"><div class="cake-icing"></div></div>
+                  <div class="cake-body"></div>
+                  <div class="cake-base"></div>
+                </div>
+              </div>
+
+              <div class="wish-grid">
+                <article class="wish-card scroll-reveal">
+                  <h3>Happiness</h3>
+                  <p>May your life be filled with laughter that echoes in your heart, warm memories that feel like home, and moments that remind you how loved you are.</p>
+                </article>
+                <article class="wish-card scroll-reveal">
+                  <h3>Success</h3>
+                  <p>May every bit of effort you give turn into real achievement, and may every dream you carry begin to bloom into a beautiful reality.</p>
+                </article>
+                <article class="wish-card scroll-reveal">
+                  <h3>Peace</h3>
+                  <p>May you always find calm in your mind, strength in your heart, and quiet confidence in the person you are becoming.</p>
+                </article>
+                <article class="wish-card scroll-reveal">
+                  <h3>Love</h3>
+                  <p>May love surround you in all its forms — from family, from friendships, and from the life you build with honesty and joy.</p>
+                </article>
+                <article class="wish-card scroll-reveal">
+                  <h3>Good Memories</h3>
+                  <p>May the years ahead be full of moments worth holding onto forever — the kind that feel golden even long after they pass.</p>
+                </article>
+                <article class="wish-card scroll-reveal">
+                  <h3>A Beautiful Future</h3>
+                  <p>May the road ahead open with opportunity, growth, hope and courage, leading you toward a life that feels deeply yours.</p>
+                </article>
+              </div>
+
+              <div class="next-wrap">
+                <a class="next-btn" href="#page-message">SCROLL DOWN FOR MORE SURPRISES ↓</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="page-message">
+          <div class="page-inner">
+            <div class="panel scroll-reveal">
+              <span class="page-tag">A Special Letter</span>
+              <h2>❤️ A Special Message For My Brother</h2>
+
+              <div class="letter-box">
+                <p><strong>Dear Muntajir,</strong></p>
+                <p>Some relationships are difficult to explain with words. They are built through years of laughter, quiet support, shared memories, and the kind of bond that only strengthens with time. You are not just my brother; you are an important part of my life, and you have shaped so much of my understanding of family, love, and togetherness.</p>
+                <p>From childhood to now, we have grown through so many moments — the playful ones, the funny ones, the confusing ones, and the ones that taught us something important. Even the small fights, the silly arguments, and the little misunderstandings somehow became part of the story. In the end, they only remind me how real our bond is.</p>
+                <p>Some bonds become stronger with every passing year. That is exactly what we have. We have learned to laugh together, to support each other, to stand by each other when life gets heavy, and to carry each other through difficult times without needing perfect words. That kind of love is rare, and I am grateful for it.</p>
+                <p>You have always been someone I could rely on, even in moments when life felt uncertain. You are someone who brings a different kind of energy into a room, someone who inspires people with your attitude and your resilience. You have your own strength, your own personality, and your own unique way of looking at life.</p>
+                <p>I am proud of you — not just for what you have achieved, but for the person you are becoming. You have worked through so much, grown through so much, and kept moving forward even when things were not easy. That is a strength that deserves to be celebrated.</p>
+                <p>There have been countless moments where you made us laugh, countless memories that still bring a smile, and countless times where your presence meant more than you probably realized. Those are the moments that matter most — the ones that stay with us long after the years pass.</p>
+                <p>Growing together has been a beautiful experience. We have seen each other change, improve, learn, and struggle, and through it all, the bond remains. That is the kind of family connection that lasts. It is deeper than time. It is deeper than distance. It is a bond built with love, honesty, and memories that will never fade.</p>
+                <p>I hope you always remember how valuable you are. Your future is still unfolding, and there are so many beautiful things waiting for you. There will be new memories, new successes, new opportunities, and new reasons to smile. And no matter where life takes you, always remember that there is someone cheering for you.</p>
+                <p>Whatever happens in life, always remember that you have someone who believes in you, someone who values you, and someone who is proud of the man you are becoming. Your journey is important, your dreams matter, and your life is filled with potential beyond what you can even see right now.</p>
+                <p>Keep your heart strong, keep your mind open, and keep moving forward with faith in yourself. You deserve joy, success, peace, and a life that feels full of meaning. And no matter how far life takes you, you will always carry with you the love and strength of the bond we share.</p>
+                <p>Happy Birthday, brother. May your life continue to grow in beautiful ways, and may every year bring you closer to the happiness you deserve. Whatever happens in life, always remember that you have someone cheering for you. ❤️</p>
+              </div>
+
+              <div class="next-wrap">
+                <a class="next-btn" href="#page-career">NEXT ↓</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="page-career">
+          <div class="page-inner">
+            <div class="panel scroll-reveal">
+              <span class="page-tag">Career & Growth</span>
+              <h2>🚀 YOUR FUTURE STARTS NOW</h2>
+
+              <p class="lead">
+                Your future is not decided by where you start. It is decided by how consistently you keep moving forward. The world does not reward comfort; it rewards discipline, learning, courage, and the willingness to keep showing up even when the path is hard. Every strong person you admire once had a beginning just like yours — full of uncertainty, challenges, and moments when they had to trust themselves.
+              </p>
+
+              <p class="lead">
+                Education is not just about marks and certificates. It is about building your thinking, understanding the world, sharpening your mind, and preparing yourself for opportunities that require wisdom, patience, and confidence. Skills matter because they are the tools that allow you to turn potential into action. The more you learn, the better equipped you become to handle change, solve problems, and build a future that is truly your own.
+              </p>
+
+              <p class="lead">
+                Career is not something that appears overnight. It is built through effort, consistency, and the courage to keep improving even when results do not come immediately. You will face failures, setbacks, and moments where you doubt yourself. That is part of the process. What matters is not that you never fall, but that you keep rising with more wisdom every time. Real success is not built in one dramatic moment; it grows through countless small decisions made with honesty and dedication.
+              </p>
+
+              <p class="lead">
+                Your dreams are not too big, your goals are not unrealistic, and your future is not limited by your current circumstances. What matters is that you keep learning, stay humble, and keep choosing growth over comfort. Confidence does not come from perfection; it comes from action. The more you trust yourself and work your way through doubt, the more capable you become.
+              </p>
+
+              <div class="breaker"></div>
+
+              <div class="quote-block scroll-reveal">
+                “Your future is not decided by where you start. It is decided by how consistently you keep moving forward.”
+              </div>
+
+              <div class="breaker"></div>
+
+              <h3 style="text-align:center; margin-top:26px; font-size: clamp(1.9rem, 3vw, 3rem);">🔥 NEVER GIVE UP</h3>
+
+              <p class="lead">
+                Life does not always move in a straight line. Sometimes it challenges you, slows you down, and tests your spirit. But those are the moments that shape the person you will become. When the road feels hard, remember that progress is still progress. Every step, even the difficult one, is part of your story. You do not need to have everything figured out today. You only need to keep moving in the direction of growth, purpose, and vision.
+              </p>
+
+              <h3 style="text-align:center; margin-top:32px; font-size: clamp(1.8rem, 2.8vw, 2.7rem);">YOUR CAREER RULES</h3>
+
+              <div class="motivation-grid">
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">01</span>
+                  <h3>Believe In Yourself</h3>
+                  <p>Confidence grows when you trust your effort. You are capable of more than your doubts allow you to see right now.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">02</span>
+                  <h3>Learn Every Day</h3>
+                  <p>Learning keeps your mind alive. The best people never stop becoming more skilled, more wise, and more prepared.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">03</span>
+                  <h3>Build Real Skills</h3>
+                  <p>Skills create value. Focus on becoming useful, consistent, and strong in the things that truly matter.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">04</span>
+                  <h3>Don't Fear Failure</h3>
+                  <p>Failure is not the opposite of success; it is part of the lesson that teaches you how to become stronger.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">05</span>
+                  <h3>Stay Consistent</h3>
+                  <p>Big results are built slowly, through repeated effort, discipline, and the refusal to quit when the journey feels long.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">06</span>
+                  <h3>Respect Your Time</h3>
+                  <p>Time is your most valuable asset. Use it wisely, invest it in growth, and do not waste it on things that drain you.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">07</span>
+                  <h3>Take Opportunities</h3>
+                  <p>Opportunities often arrive disguised as work, risk, or discomfort. Be brave enough to take the leap.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">08</span>
+                  <h3>Keep Improving</h3>
+                  <p>Success belongs to those who keep refining themselves. Growth is a daily decision, not a one-time achievement.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">09</span>
+                  <h3>Stay Humble</h3>
+                  <p>Humility keeps you teachable. It helps you grow, listen, and remain grounded even when life starts rewarding you.</p>
+                </article>
+                <article class="rule-card scroll-reveal">
+                  <span class="rule-number">10</span>
+                  <h3>Never Give Up</h3>
+                  <p>Great things take time. Keep moving, keep growing, and keep believing that your effort is not wasted.</p>
+                </article>
+              </div>
+
+              <div class="breaker"></div>
+
+              <h3 style="text-align:center; margin-top:26px; font-size: clamp(1.7rem, 2.8vw, 2.8rem);">ONE DAY...</h3>
+              <p class="lead">
+                One day you will look back at this moment and realize that every small step mattered. You will remember the days you kept going when things felt uncertain, the effort you made when nobody was watching, and the discipline it took to keep moving forward. Those details are not small. They are the foundation of everything great that will follow. The life you want is still waiting for you to build it.
+              </p>
+
+              <div class="quote-block scroll-reveal">
+                Dream Big.<br />
+                Work Hard.<br />
+                Stay Focused.<br />
+                Keep Learning.<br />
+                Your best years are still ahead. 🚀
+              </div>
+
+              <div class="next-wrap">
+                <a class="next-btn" href="#page-wishes">NEXT ↓</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="page-wishes">
+          <div class="page-inner">
+            <div class="panel scroll-reveal">
+              <span class="page-tag">Life Wishes</span>
+              <h2>✨ MY WISHES FOR YOU</h2>
+
+              <div class="wish-sections">
+                <article class="wish-section scroll-reveal">
+                  <h3>❤️ Happiness</h3>
+                  <p>May your life always have more smiles than worries, more joy than heaviness, and more peace than stress.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>🚀 Career</h3>
+                  <p>May you achieve the career you dream about and build a life rooted in purpose, ambition, and fulfillment.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>💰 Success</h3>
+                  <p>May your hard work turn into opportunities, your effort become recognition, and your dreams grow into achievements.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>👨‍👩‍👦 Family</h3>
+                  <p>May your family always remain your biggest strength, your safe place, and the source of your love and comfort.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>🤝 Friendship</h3>
+                  <p>May you always have genuine people around you who value your goodness, lift you up, and stay true to you.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>🌍 Adventures</h3>
+                  <p>May life give you beautiful places, meaningful experiences, and memories that make your heart feel alive.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>🧠 Knowledge</h3>
+                  <p>May you never stop learning, questioning, growing, and discovering the world with curiosity and courage.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>💪 Strength</h3>
+                  <p>May every difficult situation make you stronger, wiser, and more resilient than before.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>🌟 Dreams</h3>
+                  <p>May the dreams you carry today become the achievements you celebrate tomorrow, and the purpose you live by forever.</p>
+                </article>
+                <article class="wish-section scroll-reveal">
+                  <h3>❤️ Peace</h3>
+                  <p>May you always have peace in your heart, even when life is loud, uncertain, or difficult.</p>
+                </article>
+              </div>
+
+              <div class="next-wrap">
+                <a class="next-btn" href="#page-memories">NEXT ↓</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="page-memories">
+          <div class="page-inner">
+            <div class="panel scroll-reveal">
+              <span class="page-tag">Memories</span>
+              <h2>📸 MEMORIES & MOMENTS</h2>
+
+              <div class="memory-gallery">
+                <article class="photo-card scroll-reveal">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23241d41'/%3E%3Cstop offset='1' stop-color='%234d2f8d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='700' fill='url(%23g)'/%3E%3Crect x='80' y='120' width='740' height='440' rx='28' fill='%236a4ab4' stroke='%23ffd166' stroke-width='4'/%3E%3Crect x='160' y='180' width='580' height='320' rx='22' fill='%238f60d9' stroke='%23ffe0a8' stroke-width='3'/%3E%3Ctext x='450' y='305' text-anchor='middle' fill='white' font-size='36' font-family='Arial' font-weight='700'%3EMEMORY%3C/text%3E%3Ctext x='450' y='365' text-anchor='middle' fill='%23ffd166' font-size='82' font-family='Arial' font-weight='700'%3E1%3C/text%3E%3C/svg%3E" alt="Birthday memory 1" />
+                  <div class="photo-caption">One beautiful memory ❤️</div>
+                </article>
+                <article class="photo-card scroll-reveal">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23291e42'/%3E%3Cstop offset='1' stop-color='%235d3faa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='700' fill='url(%23g)'/%3E%3Crect x='80' y='120' width='740' height='440' rx='28' fill='%236f4fc8' stroke='%23ffd166' stroke-width='4'/%3E%3Crect x='160' y='180' width='580' height='320' rx='22' fill='%238d69db' stroke='%23ffe0a8' stroke-width='3'/%3E%3Ctext x='450' y='305' text-anchor='middle' fill='white' font-size='36' font-family='Arial' font-weight='700'%3EMEMORY%3C/text%3E%3Ctext x='450' y='365' text-anchor='middle' fill='%23ffd166' font-size='82' font-family='Arial' font-weight='700'%3E2%3C/text%3E%3C/svg%3E" alt="Birthday memory 2" />
+                  <div class="photo-caption">Another chapter of our story.</div>
+                </article>
+                <article class="photo-card scroll-reveal">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%231d1836'/%3E%3Cstop offset='1' stop-color='%23523a8f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='700' fill='url(%23g)'/%3E%3Crect x='80' y='120' width='740' height='440' rx='28' fill='%23624fbd' stroke='%23ffd166' stroke-width='4'/%3E%3Crect x='160' y='180' width='580' height='320' rx='22' fill='%238f73d8' stroke='%23ffe0a8' stroke-width='3'/%3E%3Ctext x='450' y='305' text-anchor='middle' fill='white' font-size='36' font-family='Arial' font-weight='700'%3EMEMORY%3C/text%3E%3Ctext x='450' y='365' text-anchor='middle' fill='%23ffd166' font-size='82' font-family='Arial' font-weight='700'%3E3%3C/text%3E%3C/svg%3E" alt="Birthday memory 3" />
+                  <div class="photo-caption">Some moments never get old.</div>
+                </article>
+                <article class="photo-card scroll-reveal">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%232e2447'/%3E%3Cstop offset='1' stop-color='%236641a3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='700' fill='url(%23g)'/%3E%3Crect x='80' y='120' width='740' height='440' rx='28' fill='%236f4dcc' stroke='%23ffd166' stroke-width='4'/%3E%3Crect x='160' y='180' width='580' height='320' rx='22' fill='%23915ed8' stroke='%23ffe0a8' stroke-width='3'/%3E%3Ctext x='450' y='305' text-anchor='middle' fill='white' font-size='36' font-family='Arial' font-weight='700'%3EMEMORY%3C/text%3E%3Ctext x='450' y='365' text-anchor='middle' fill='%23ffd166' font-size='82' font-family='Arial' font-weight='700'%3E4%3C/text%3E%3C/svg%3E" alt="Birthday memory 4" />
+                  <div class="photo-caption">A smile worth keeping forever.</div>
+                </article>
+                <article class="photo-card scroll-reveal">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23281d44'/%3E%3Cstop offset='1' stop-color='%23543a8f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='700' fill='url(%23g)'/%3E%3Crect x='80' y='120' width='740' height='440' rx='28' fill='%236a5ac9' stroke='%23ffd166' stroke-width='4'/%3E%3Crect x='160' y='180' width='580' height='320' rx='22' fill='%23896cd8' stroke='%23ffe0a8' stroke-width='3'/%3E%3Ctext x='450' y='305' text-anchor='middle' fill='white' font-size='36' font-family='Arial' font-weight='700'%3EMEMORY%3C/text%3E%3Ctext x='450' y='365' text-anchor='middle' fill='%23ffd166' font-size='82' font-family='Arial' font-weight='700'%3E5%3C/text%3E%3C/svg%3E" alt="Birthday memory 5" />
+                  <div class="photo-caption">Little moments, big feelings.</div>
+                </article>
+                <article class="photo-card scroll-reveal">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23211735'/%3E%3Cstop offset='1' stop-color='%234b2d82'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='700' fill='url(%23g)'/%3E%3Crect x='80' y='120' width='740' height='440' rx='28' fill='%235d4cb0' stroke='%23ffd166' stroke-width='4'/%3E%3Crect x='160' y='180' width='580' height='320' rx='22' fill='%23876fd3' stroke='%23ffe0a8' stroke-width='3'/%3E%3Ctext x='450' y='305' text-anchor='middle' fill='white' font-size='36' font-family='Arial' font-weight='700'%3EMEMORY%3C/text%3E%3Ctext x='450' y='365' text-anchor='middle' fill='%23ffd166' font-size='82' font-family='Arial' font-weight='700'%3E6%3C/text%3E%3C/svg%3E" alt="Birthday memory 6" />
+                  <div class="photo-caption">The kind of memories that stay close.</div>
+                </article>
+                <article class="photo-card scroll-reveal">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%232c2340'/%3E%3Cstop offset='1' stop-color='%235a3a9a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='700' fill='url(%23g)'/%3E%3Crect x='80' y='120' width='740' height='440' rx='28' fill='%23674ec0' stroke='%23ffd166' stroke-width='4'/%3E%3Crect x='160' y='180' width='580' height='320' rx='22' fill='%239377de' stroke='%23ffe0a8' stroke-width='3'/%3E%3Ctext x='450' y='305' text-anchor='middle' fill='white' font-size='36' font-family='Arial' font-weight='700'%3EMEMORY%3C/text%3E%3Ctext x='450' y='365' text-anchor='middle' fill='%23ffd166' font-size='82' font-family='Arial' font-weight='700'%3E7%3C/text%3E%3C/svg%3E" alt="Birthday memory 7" />
+                  <div class="photo-caption">Moments worth celebrating again and again.</div>
+                </article>
+                <article class="photo-card scroll-reveal">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23251b3d'/%3E%3Cstop offset='1' stop-color='%234a2d90'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='700' fill='url(%23g)'/%3E%3Crect x='80' y='120' width='740' height='440' rx='28' fill='%235f4fa9' stroke='%23ffd166' stroke-width='4'/%3E%3Crect x='160' y='180' width='580' height='320' rx='22' fill='%238b5fe0' stroke='%23ffe0a8' stroke-width='3'/%3E%3Ctext x='450' y='305' text-anchor='middle' fill='white' font-size='36' font-family='Arial' font-weight='700'%3EMEMORY%3C/text%3E%3Ctext x='450' y='365' text-anchor='middle' fill='%23ffd166' font-size='82' font-family='Arial' font-weight='700'%3E8%3C/text%3E%3C/svg%3E" alt="Birthday memory 8" />
+                  <div class="photo-caption">Memories worth keeping forever.</div>
+                </article>
+              </div>
+
+              <div class="last-letter">
+                <h3 style="text-align:center; font-size: clamp(1.9rem, 3vw, 3rem); margin-bottom: 24px;">💌 ONE LAST LETTER</h3>
+                <div class="letter-box typewriter" id="lastLetterBox">
+                  <p>Today is your birthday, and it is a reminder of how far you have come and how much potential still lies ahead of you. Every year adds meaning to your life, every experience shapes you, and every story you carry becomes part of the person you are becoming.</p>
+                  <p>Your future is waiting for you with doors open, opportunities growing, and lessons ready to be learned. You have the ability to create a life that feels meaningful, successful, joyful, and full of your own purpose. The strength you have shown so far is already a sign that you are capable of more than you think.</p>
+                  <p>May your career bring you fulfillment, your decisions bring you wisdom, and your dreams bring you closer to the life you truly want. May your family always be your anchor, your happiness always be worth protecting, and your confidence always grow with each step you take.</p>
+                  <p>May you keep choosing growth over fear, ambition over doubt, and joy over exhaustion. Life is not just about reaching milestones — it is also about becoming a person who can stand proudly in the life he creates. And you absolutely have that power.</p>
+                  <p>There is so much good waiting for you: success, peace, love, learning, confidence, and many beautiful moments that will deserve to be remembered. Keep believing in your potential, keep valuing yourself, and keep growing even when the path feels long.</p>
+                  <p>Never stop believing in yourself. Never stop learning. Never stop dreaming. Never stop smiling. And never forget that you are capable of doing amazing things. Your journey is still unfolding, and it is a journey full of possibility.</p>
+                  <p>Happy Birthday, Muntajir. May this year be the beginning of more strength, more joy, more courage, more clarity, and more beauty than you have ever imagined. You are worthy of every good thing life has to offer, and your best chapter is still ahead.</p>
+                  <p>Keep moving forward with faith, keep building with purpose, and keep trusting the life that is waiting for you. You are destined for more than you know.</p>
+                </div>
+              </div>
+
+              <div class="next-wrap">
+                <a class="next-btn" href="#page-final">NEXT ↓</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page final-celebration" id="page-final">
+          <div class="final-card scroll-reveal">
+            <h2>🎉 HAPPY BIRTHDAY 🎉</h2>
+            <div class="name">MUNTAJIR SHEIKH ❤️</div>
+            <div class="dob-text">04 OCTOBER 2000</div>
+            <div class="tagline">YOUR BEST CHAPTER IS YET TO COME.</div>
+
+            <p class="final-message">
+              May this year bring you closer to your dreams.<br />
+              May you become more confident. More successful. More knowledgeable. More independent. And happier than ever before.<br /><br />
+              Keep moving forward. Your journey has only just begun. 🚀
+            </p>
+
+            <button class="celebrate-button" id="celebrateAgainBtn" type="button">🎉 CELEBRATE AGAIN 🎉</button>
+          </div>
+
+          <div class="back-to-top-wrap">
+            <button class="back-to-top" id="backToTopBtn" type="button">BACK TO TOP ↑</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      const CORRECT_DOB = "2000-10-04";
+
+      const introScreen = document.getElementById("introScreen");
+      const dobScreen = document.getElementById("dobScreen");
+      const mainSite = document.getElementById("mainSite");
+      const dobForm = document.getElementById("dobForm");
+      const dobInput = document.getElementById("dobInput");
+      const dobMessage = document.getElementById("dobMessage");
+      const startSurpriseBtn = document.getElementById("startSurpriseBtn");
+      const musicToggle = document.getElementById("musicToggle");
+      const birthdayMusic = document.getElementById("birthdayMusic");
+      let audioCtx = null;
+      let melodyTimer = null;
+      const confettiLayer = document.getElementById("confettiLayer");
+      const heartLayer = document.getElementById("heartLayer");
+      const sparkLayer = document.getElementById("sparkLayer");
+      const rocketLayer = document.getElementById("rocketLayer");
+      const celebrateAgainBtn = document.getElementById("celebrateAgainBtn");
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      const topNav = document.querySelector(".top-nav");
+      const navLinks = [...document.querySelectorAll(".nav-link")];
+      const revealElements = document.querySelectorAll(".scroll-reveal, .slide-left, .slide-right, .scale-up");
+
+      function createFloatingDecor() {
+        const floatingLayer = document.getElementById("floatingLayer");
+        if (!floatingLayer) return;
+
+        for (let i = 0; i < 26; i++) {
+          const balloon = document.createElement("span");
+          balloon.className = "balloon";
+          balloon.style.left = `${Math.random() * 100}%`;
+          balloon.style.top = `${Math.random() * 100}%`;
+          balloon.style.animationDelay = `${(Math.random() * 4).toFixed(2)}s`;
+          floatingLayer.appendChild(balloon);
+        }
+
+        for (let i = 0; i < 28; i++) {
+          const star = document.createElement("span");
+          star.className = "star";
+          star.style.left = `${Math.random() * 100}%`;
+          star.style.top = `${Math.random() * 100}%`;
+          star.style.animationDelay = `${(Math.random() * 3).toFixed(2)}s`;
+          floatingLayer.appendChild(star);
+        }
+      }
+
+      function playMusic() {
+        const AudioCtor = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtor) {
+          musicToggle.textContent = "🔊 Music On/Off";
+          return;
+        }
+
+        if (!audioCtx) {
+          audioCtx = new AudioCtor();
+        }
+
+        if (audioCtx.state === "suspended") {
+          audioCtx.resume();
+        }
+
+        if (!melodyTimer) {
+          const notes = [261.63, 329.63, 392.0, 523.25, 392.0, 329.63, 293.66, 349.23];
+          let i = 0;
+          const playTone = () => {
+            if (!audioCtx) return;
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            oscillator.type = "sine";
+            oscillator.frequency.value = notes[i % notes.length];
+            gainNode.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.08, audioCtx.currentTime + 0.04);
+            gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.46);
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.48);
+            i += 1;
+          };
+
+          playTone();
+          melodyTimer = setInterval(playTone, 500);
+        }
+
+        musicToggle.textContent = "🔇 Music Off";
+      }
+
+      function toggleMusic() {
+        if (!audioCtx) {
+          playMusic();
+          return;
+        }
+
+        if (audioCtx.state === "running") {
+          audioCtx.suspend();
+          musicToggle.textContent = "🔊 Music On";
+        } else {
+          audioCtx.resume();
+          musicToggle.textContent = "🔇 Music Off";
+        }
+      }
+
+      function createBurst(type, count, options = {}) {
+        const layer = type === "confetti" ? confettiLayer : type === "heart" ? heartLayer : sparkLayer;
+        if (!layer) return;
+
+        for (let i = 0; i < count; i++) {
+          const piece = document.createElement("span");
+          if (type === "confetti") {
+            piece.className = "confetti-piece";
+            const colors = ["#ff70b6", "#ffd166", "#7fe9ff", "#7bffb7", "#9d8bff", "#ff8d86"];
+            piece.style.background = colors[i % colors.length];
+            piece.style.left = `${Math.random() * 100}%`;
+            piece.style.top = "-16px";
+            piece.style.setProperty("--x", `${(Math.random() - 0.5) * 260}px`);
+            piece.style.setProperty("--r", `${(Math.random() * 720 - 360).toFixed(0)}deg`);
+            piece.style.animationDelay = `${(Math.random() * 0.4).toFixed(2)}s`;
+          } else if (type === "heart") {
+            piece.className = "heart-piece";
+            piece.textContent = "❤";
+            piece.style.left = `${Math.random() * 100}%`;
+            piece.style.top = "0";
+            piece.style.setProperty("--x", `${(Math.random() - 0.5) * 220}px`);
+            piece.style.setProperty("--r", `${(Math.random() * 520 - 260).toFixed(0)}deg`);
+            piece.style.color = ["#ff7ccf", "#ffa6d1", "#ff9bcb"][i % 3];
+            piece.style.animationDelay = `${(Math.random() * 0.5).toFixed(2)}s`;
+          } else {
+            piece.className = "spark";
+            piece.style.left = `${Math.random() * 100}%`;
+            piece.style.top = `${Math.random() * 100}%`;
+            piece.style.animationDuration = `${(Math.random() * 2 + 1.4).toFixed(2)}s`;
+          }
+
+          layer.appendChild(piece);
+          setTimeout(() => piece.remove(), 5000);
+        }
+      }
+
+      function triggerFinalCelebration() {
+        createBurst("confetti", 110);
+        createBurst("heart", 42);
+        createBurst("spark", 50);
+
+        const rocket = document.createElement("div");
+        rocket.className = "rocket";
+        rocket.textContent = "🚀";
+        rocket.style.left = "12%";
+        rocket.style.top = "44%";
+        rocketLayer.appendChild(rocket);
+        setTimeout(() => rocket.remove(), 7200);
+
+        const rocket2 = document.createElement("div");
+        rocket2.className = "rocket";
+        rocket2.textContent = "✨";
+        rocket2.style.left = "72%";
+        rocket2.style.top = "58%";
+        rocket2.style.animationDuration = "8s";
+        rocketLayer.appendChild(rocket2);
+        setTimeout(() => rocket2.remove(), 8000);
+      }
+
+      function revealOnScroll() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, { threshold: 0.18 });
+
+        revealElements.forEach((el) => observer.observe(el));
+      }
+
+      function setActiveNav() {
+        const sections = [
+          document.getElementById("page-birthday"),
+          document.getElementById("page-message"),
+          document.getElementById("page-career"),
+          document.getElementById("page-wishes"),
+          document.getElementById("page-memories"),
+          document.getElementById("page-final")
+        ];
+
+        const navMap = [
+          document.querySelector('.nav-link[href="#page-birthday"]'),
+          document.querySelector('.nav-link[href="#page-message"]'),
+          document.querySelector('.nav-link[href="#page-career"]'),
+          document.querySelector('.nav-link[href="#page-wishes"]'),
+          document.querySelector('.nav-link[href="#page-memories"]'),
+          document.querySelector('.nav-link[href="#page-final"]')
+        ];
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              navLinks.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${id}`));
+            }
+          });
+        }, { threshold: 0.6 });
+
+        sections.forEach((section) => sectionObserver.observe(section));
+      }
+
+      function showIntro() {
+        introScreen.classList.remove("hidden");
+        dobScreen.classList.add("hidden");
+        mainSite.classList.add("hidden");
+      }
+
+      startSurpriseBtn.addEventListener("click", () => {
+        playMusic();
+        introScreen.classList.add("hidden");
+        dobScreen.classList.remove("hidden");
+        dobInput.focus();
+      });
+
+      dobForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const value = dobInput.value;
+
+        if (value !== CORRECT_DOB) {
+          dobMessage.textContent = "Oops! That's not your birthday 😜 Try Again!";
+          dobMessage.classList.remove("success");
+          dobMessage.classList.add("error");
+          dobInput.classList.add("error");
+          dobInput.focus();
+          createBurst("heart", 18);
+          setTimeout(() => dobInput.classList.remove("error"), 500);
+          return;
+        }
+
+        dobMessage.textContent = "🎉 SURPRISE UNLOCKED! 🎉";
+        dobMessage.classList.remove("error");
+        dobMessage.classList.add("success");
+        dobInput.classList.remove("error");
+        createBurst("confetti", 120);
+        createBurst("heart", 40);
+        createBurst("spark", 36);
+        playMusic();
+
+        setTimeout(() => {
+          dobScreen.classList.add("hidden");
+          mainSite.classList.remove("hidden");
+          setTimeout(() => {
+            document.getElementById("page-birthday").scrollIntoView({ behavior: "smooth" });
+          }, 150);
+        }, 1200);
+      });
+
+      musicToggle.addEventListener("click", toggleMusic);
+
+      celebrateAgainBtn.addEventListener("click", () => {
+        triggerFinalCelebration();
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        createFloatingDecor();
+        revealOnScroll();
+        setActiveNav();
+        showIntro();
+        triggerFinalCelebration();
+      });
+
+      const finalLetterBox = document.getElementById("lastLetterBox");
+      if (finalLetterBox) {
+        const text = finalLetterBox.innerHTML;
+        finalLetterBox.innerHTML = "";
+        let index = 0;
+        let currentText = "";
+        const type = () => {
+          if (index < text.length) {
+            currentText += text[index];
+            finalLetterBox.innerHTML = currentText + '<span class="cursor"></span>';
+            index += 1;
+            setTimeout(type, 18);
+          } else {
+            finalLetterBox.innerHTML = text + '<span class="cursor"></span>';
+          }
+        };
+        setTimeout(type, 700);
+      }
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const targetId = link.getAttribute("href");
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            event.preventDefault();
+            targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        if (topNav) {
+          topNav.style.opacity = window.scrollY > 12 ? "1" : "0.96";
+        }
+      });
+    </script>
+  </body>
+</html>
